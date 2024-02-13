@@ -39,16 +39,16 @@
   <script src="./static/js/bulma-carousel.min.js"></script>
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
-  <!-- <script type="text/javascript"
+  <script type="text/javascript"
             src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_SVG">
-    </script> -->
+    </script>
 
-    <script type="text/x-mathjax-config">
+    <!-- <script type="text/x-mathjax-config">
       MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
     </script>
     <script type="text/javascript"
       src="http://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-    </script>
+    </script> -->
 </head>
 <body>
 
@@ -392,7 +392,7 @@
             <tr>
               <td>
                 <p style="text-align:justify; text-justify:inter-ideograph;"> 
-                  The figure illustrates pipelines of randomized pairwise chat and infectious jailbreak. As shown in the bottom left, an MLLM agent consists of four components: an MLLM, the RAG module, text histories, and an image album. As shown in the upper left, in the $t$-th chat round, the $N$ agents are randomly partitioned into two groups, where a pairwise chat will happen between each questioning agent and answering agent. As shown in the right, in each pairwise chat, the questioning agent first generates a plan according to its text histories, and retrieves an image from its image album according to the generated plan. It further generates a question according to its text histories and the retrieved image, and sends the image together with the question to the answering agent. Then, the answering agent generates an answer according to its text histories, as well as the image and the question. Finally, the question-answer pair is enqueued into text histories of both agents, while the image is only enqueued into album of the questioning agent.
+                  The figure illustrates pipelines of randomized pairwise chat and infectious jailbreak. As shown in the bottom left, an MLLM agent consists of four components: an MLLM, the RAG module, text histories, and an image album. As shown in the upper left, in the \(t\)-th chat round, the \(N\) agents are randomly partitioned into two groups, where a pairwise chat will happen between each questioning agent and answering agent. As shown in the right, in each pairwise chat, the questioning agent first generates a plan according to its text histories, and retrieves an image from its image album according to the generated plan. It further generates a question according to its text histories and the retrieved image, and sends the image together with the question to the answering agent. Then, the answering agent generates an answer according to its text histories, as well as the image and the question. Finally, the question-answer pair is enqueued into text histories of both agents, while the image is only enqueued into album of the questioning agent.
                 </p>
               </td>
             </tr>
@@ -514,7 +514,7 @@
             <tr>
               <td>
                 <p style="text-align:justify; text-justify:inter-ideograph;"> 
-                  The top figure shows cumulative and current infection ratios at the $t$-th chat round of different adversarial images. We find with small adversarial budgets in challenging scenarios, the infection may fail. The bottom figure shows the infection chance $\alpha^{\textrm{Q}}_t$, $\alpha^{\textrm{A}}_t$ and $\beta_t$ of the corresponding adversarial images. Here $\beta$ is defined as the probability of a virus-carrying questioning agent transmissing the virus (adversarial image) to a benign answering agent while $\alpha$ is defined as the probability of a virus-carrying agent exhibiting symptoms (jailbreaking). It is observed that most failure cases are attributed to low $\alpha$ during the chat process.
+                  The top figure shows cumulative and current infection ratios at the \(t\)-th chat round of different adversarial images. We find with small adversarial budgets in challenging scenarios, the infection may fail. The bottom figure shows the infection chance \(\alpha^{\textrm{Q}}_t\), \(\alpha^{\textrm{A}}_t\) and \(\beta_t\) of the corresponding adversarial images. Here \(\beta\) is defined as the probability of a virus-carrying questioning agent transmissing the virus (adversarial image) to a benign answering agent while \(\alpha\) is defined as the probability of a virus-carrying agent exhibiting symptoms (jailbreaking). It is observed that most failure cases are attributed to low \(\alpha\) during the chat process.
                 </p>
               </td>
             </tr>
