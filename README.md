@@ -1,5 +1,5 @@
 <p align="center" width="100%">
-<img src="assets/logo.png" alt="Agent-Smith" style="width: 50%; min-width: 300px; display: block; margin: auto;">
+<img src="assets/logo_.png" alt="Agent-Smith" style="width: 50%; min-width: 300px; display: block; margin: auto;">
 </p>
 
 <h1 align='center' style="text-align:center; font-weight:bold; font-size:2.0em;letter-spacing:2.0px;">
