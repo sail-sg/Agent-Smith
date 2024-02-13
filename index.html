@@ -39,6 +39,16 @@
   <script src="./static/js/bulma-carousel.min.js"></script>
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
+  <!-- <script type="text/javascript"
+            src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_SVG">
+    </script> -->
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+    </script>
+    <script type="text/javascript"
+      src="http://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
 </head>
 <body>
 
@@ -208,32 +218,31 @@
 
 
 <center>
-  <img class="round" style="width:300px" src="assets/logo.png"/>
+  <img class="round" style="width:300px" src="assets/logo_.png"/>
 </center>
 <section class="section">
   <div class="container is-max-desktop">
     <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-2" >Abstract</h2>
+        <h2 class="title is-2" >Highlights</h2>
         <div class="content has-text-justified">
           <p>
             <p>
-            A multimodal large language model (MLLM) agent can receive instructions, capture images, retrieve histories from memory, and decide which tools to use. 
-            Nonetheless, red-teaming efforts have revealed that adversarial images/prompts can jailbreak an MLLM and cause unaligned behaviors. 
+            1. <b>Background</b>. A multimodal large language model (MLLM) agent can receive instructions, capture images, retrieve histories from memory, and decide which tools to use. Nonetheless, red-teaming efforts have revealed that adversarial images/prompts can jailbreak an MLLM and cause unaligned behaviors. 
             </p>
             <p>
-              In this work, we report an even more severe safety issue in multi-agent environments, referred to as <b>infectious jailbreak</b>. 
+              2. <b>New Concept</b>. In this work, we report an even more severe safety issue in multi-agent environments, referred to as <b>infectious jailbreak</b>. 
               It entails the adversary simply jailbreaking a single agent, and without any further intervention from the adversary, 
               (almost) all agents will become infected <em>exponentially fast</em> and exhibit harmful behaviors. 
             </p>
             <p>
-              To validate the feasibility of infectious jailbreak, we simulate multi-agent environments containing up to <em>one million</em> LLaVA-1.5 agents, 
+              3. <b>Proof-of-concept</b>. To validate the feasibility of infectious jailbreak, we simulate multi-agent environments containing up to <em>one million</em> LLaVA-1.5 agents, 
               and employ randomized pair-wise chat as a proof-of-concept instantiation for multi-agent interaction.
               Our results show that feeding an (infectious) adversarial image into the memory of any randomly chosen agent is sufficient to achieve infectious jailbreak. 
             </p>
             <p>
-              Finally, we derive a simple principle for determining whether a defense mechanism can provably restrain the spread of infectious jailbreak, 
+              4. <b>Theoretical analysis</b>. Finally, we derive a simple principle for determining whether a defense mechanism can provably restrain the spread of infectious jailbreak, 
               but how to design a practical defense that meets this principle remains an open question to investigate.
             </p>
         </p>
@@ -361,74 +370,11 @@
     </div>
     <!-- / Animation. -->
 
-    <!-- Overview -->
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Infectious jailbreaking</h2>
-
-        <div class="content has-text-justified">
-			<center>
-				<table align=center width=880px>
-					<tr>
-						<td width=260px>
-							<!-- <center> -->
-								<img class="round" style="width:40%" src="./assets/agentsmith_demo_1million.png" ALIGN="right" HSPACE="50" VSPACE="0"/>
-							<!-- </center> -->
-              <p>
-              In order to assess the viability of infectious jailbreak, 
-              we use randomized pair-wise chat as a proof-of-concept instantiation for multi-agent interaction 
-              and formalize the resulting infectious dynamics in ideal conditions.
-              </p>
-              <p>
-              We simulate a randomized pair-wise chatting environment containing <em>one million</em> LLaVA-1.5 agents. 
-              In the 0-th chat round, the adversary feeds an <b>infectious jailbreaking</b> image into the memory bank of a randomly selected agent. 
-              Then, <em>without any further intervention from the adversary</em>, 
-              the infection ratio reaches ~ 100% exponentially fast after only 27 ~ 31 chat rounds, 
-              and all infected agents exhibit harmful behaviors.
-              </p>
-						</td>
-					</tr>
-				</table>
-				<!-- <table align=center width=880px>
-					<tr>
-						<td>
-							<p style="text-align:justify; text-justify:inter-ideograph;">
-                <h4 class="title is-5">Contributions</h4>
-							<b>1: </b>
-							We consider the problem of FSIG with Transfer Learning using very limited target samples (e.g., 10-shot). <br>
-							<b>2: </b>
-							Our work makes two contributions: 
-							<ul>
-								<li>We discover that when the close proximity assumption between source-target domain is relaxed, SOTA FSIG methods, e.g., EWC (Li et al.), CDC (Ojha et al.), DCL (Zhao et al.), 
-                  which consider only source domain/source task in knowledge preserving perform no better than a baseline fine-tuning method, e.g., TGAN, (Wang et al.).</li>
-								<li>We propose a novel adaptation-aware kernel modulation for FSIG that achieves SOTA performance across source / target domains with different proximity. </li>
-							</ul>
-							<b>3: </b>
-							Schematic diagram of our proposed Importance Probing Mechanism: 
-              We measure the importance of each kernel for the target domain after probing and preserve source domain knowledge that is important for target domain adaptation. 
-              The same operations are applied to discriminator.
-						</td>
-					</tr>
-				</table> -->
-				<table align=center width=880px>
-					<tr>
-						<td width=260px>
-							<!-- <center>
-								<img class="round" style="width:880px" src="./resources/method.jpg"/>
-							</center> -->
-						</td>
-					</tr>
-				</table>
-			</center>
-        </div>
-      </div>
-    </div>
-    <!--/ Overview -->
 
     <!-- Experiment-->
     <div class="columns is-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3">Framework</h2>
+        <h2 class="title is-3">Randomized pairwise chat and infectious jailbreak</h2>
 
         <div class="content has-text-justified">
 			<center>
@@ -436,7 +382,7 @@
 					<tr>
 						<td width=260px>
 							<center>
-								<img class="round" style="width:880px" src="./assets/framework.png"/>
+								<img class="round" style="width:880px" src="./assets/framework_.png"/>
 							</center>
 						</td>
 					</tr>
@@ -445,9 +391,9 @@
           <center>
             <tr>
               <td>
-                <!-- <p style="text-align:justify; text-justify:inter-ideograph;"> 
-                  <b>Pipelines of randomized pairwise chat and infectious jailbreak</b>. 
-                </p> -->
+                <p style="text-align:justify; text-justify:inter-ideograph;"> 
+                  The figure illustrates pipelines of randomized pairwise chat and infectious jailbreak. As shown in the bottom left, an MLLM agent consists of four components: an MLLM, the RAG module, text histories, and an image album. As shown in the upper left, in the $t$-th chat round, the $N$ agents are randomly partitioned into two groups, where a pairwise chat will happen between each questioning agent and answering agent. As shown in the right, in each pairwise chat, the questioning agent first generates a plan according to its text histories, and retrieves an image from its image album according to the generated plan. It further generates a question according to its text histories and the retrieved image, and sends the image together with the question to the answering agent. Then, the answering agent generates an answer according to its text histories, as well as the image and the question. Finally, the question-answer pair is enqueued into text histories of both agents, while the image is only enqueued into album of the questioning agent.
+                </p>
               </td>
             </tr>
           </center>
@@ -483,9 +429,74 @@
     <!--/ Overview -->
 
 
+        <!-- Overview -->
+        <div class="columns is-centered">
+          <div class="column is-full-width">
+            <h2 class="title is-3">Infectious jailbreaking results</h2>
+    
+            <div class="content has-text-justified">
+          <center>
+            <table align=center width=880px>
+              <tr>
+                <td width=260px>
+                  <!-- <center> -->
+                    <img class="round" style="width:40%" src="./assets/agentsmith_demo_1million.png" ALIGN="right" HSPACE="50" VSPACE="0"/>
+                  <!-- </center> -->
+                  <p>
+                  In order to assess the viability of infectious jailbreak, 
+                  we use randomized pair-wise chat as a proof-of-concept instantiation for multi-agent interaction 
+                  and formalize the resulting infectious dynamics in ideal conditions.
+                  </p>
+                  <p>
+                  We simulate a randomized pair-wise chatting environment containing <em>one million</em> LLaVA-1.5 agents. 
+                  In the 0-th chat round, the adversary feeds an <b>infectious jailbreaking</b> image into the memory bank of a randomly selected agent. 
+                  Then, <em>without any further intervention from the adversary</em>, 
+                  the infection ratio reaches ~ 100% exponentially fast after only 27 ~ 31 chat rounds, 
+                  and all infected agents exhibit harmful behaviors.
+                  </p>
+                </td>
+              </tr>
+            </table>
+            <!-- <table align=center width=880px>
+              <tr>
+                <td>
+                  <p style="text-align:justify; text-justify:inter-ideograph;">
+                    <h4 class="title is-5">Contributions</h4>
+                  <b>1: </b>
+                  We consider the problem of FSIG with Transfer Learning using very limited target samples (e.g., 10-shot). <br>
+                  <b>2: </b>
+                  Our work makes two contributions: 
+                  <ul>
+                    <li>We discover that when the close proximity assumption between source-target domain is relaxed, SOTA FSIG methods, e.g., EWC (Li et al.), CDC (Ojha et al.), DCL (Zhao et al.), 
+                      which consider only source domain/source task in knowledge preserving perform no better than a baseline fine-tuning method, e.g., TGAN, (Wang et al.).</li>
+                    <li>We propose a novel adaptation-aware kernel modulation for FSIG that achieves SOTA performance across source / target domains with different proximity. </li>
+                  </ul>
+                  <b>3: </b>
+                  Schematic diagram of our proposed Importance Probing Mechanism: 
+                  We measure the importance of each kernel for the target domain after probing and preserve source domain knowledge that is important for target domain adaptation. 
+                  The same operations are applied to discriminator.
+                </td>
+              </tr>
+            </table> -->
+            <table align=center width=880px>
+              <tr>
+                <td width=260px>
+                  <!-- <center>
+                    <img class="round" style="width:880px" src="./resources/method.jpg"/>
+                  </center> -->
+                </td>
+              </tr>
+            </table>
+          </center>
+            </div>
+          </div>
+        </div>
+        <!--/ Overview -->
+
+
     <div class="columns is-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3">Case study</h2>
+        <h2 class="title is-3">Infectious dynamics</h2>
 
         <div class="content has-text-justified">
 			<center>
@@ -493,7 +504,7 @@
 					<tr>
 						<td width=260px>
 							<center>
-								<img class="round" style="width:880px" src="./assets/case.png"/>
+								<img class="round" style="width:880px" src="./assets/case_.png"/>
 							</center>
 						</td>
 					</tr>
@@ -502,9 +513,9 @@
           <center>
             <tr>
               <td>
-                <!-- <p style="text-align:justify; text-justify:inter-ideograph;"> 
-                  <b>Pipelines of randomized pairwise chat and infectious jailbreak</b>. 
-                </p> -->
+                <p style="text-align:justify; text-justify:inter-ideograph;"> 
+                  The top figure shows cumulative and current infection ratios at the $t$-th chat round of different adversarial images. We find with small adversarial budgets in challenging scenarios, the infection may fail. The bottom figure shows the infection chance $\alpha^{\textrm{Q}}_t$, $\alpha^{\textrm{A}}_t$ and $\beta_t$ of the corresponding adversarial images. Here $\beta$ is defined as the probability of a virus-carrying questioning agent transmissing the virus (adversarial image) to a benign answering agent while $\alpha$ is defined as the probability of a virus-carrying agent exhibiting symptoms (jailbreaking). It is observed that most failure cases are attributed to low $\alpha$ during the chat process.
+                </p>
               </td>
             </tr>
           </center>
