@@ -1,3 +1,7 @@
+<p align="center" width="100%">
+<img src="assets/logo.png" alt="Agent-Smith" style="width: 50%; min-width: 300px; display: block; margin: auto;">
+</p>
+
 <h1 align='center' style="text-align:center; font-weight:bold; font-size:2.0em;letter-spacing:2.0px;">
                 Agent Smith: A Single Image Can Jailbreak One Million Multimodal LLM Agents Exponentially Fast </h1>
 
@@ -20,16 +24,6 @@
 ```
 In this work, we report an even more severe safety issue in multi-agent environments, referred to as infectious jailbreak. It entails the adversary simply jailbreaking a single agent, and without any further intervention from the adversary, (almost) all agents will become infected exponentially fast and exhibit harmful behaviors.
 ``` -->
-
-<p>
-<figure>
-<center>
-<img src="./assets/logo.png" width=55% height=55%>
-</center>
-  <figcaption></figcaption>
-</figure>
-</p>
-<br>
 
 ## Setup
 We run all our experiments on A100 GPUs with 40GB memory. To get started, follow these steps:
