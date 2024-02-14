@@ -14,7 +14,7 @@
 <p align='left' style="text-align:left;font-size:1.2em;">
 <b>
     [<a href="https://sail-sg.github.io/Agent-Smith" target="_blank" style="text-decoration: none;">Project Page</a>] |
-    [<a href="tbd" target="_blank" style="text-decoration: none;">arXiv</a>]
+    [<a href="https://arxiv.org/abs/2402.08567" target="_blank" style="text-decoration: none;">arXiv</a>]
 </b>
 </p>
 
@@ -131,6 +131,6 @@ If you find this project useful in your research, please consider citing our pap
       title={Agent Smith: A Single Image Can Jailbreak One Million Multimodal LLM Agents Exponentially Fast},
       author={Gu, Xiangming and Zheng, Xiaosen and Pang, Tianyu 
         and Du, Chao and Liu, Qian and Wang, Ye and Jiang, Jing and Lin, Min},
-      journal={arXiv preprint arXiv: tbd},
+      journal={arXiv preprint arXiv:2402.08567},
       year={2024},
       }
