@@ -31,7 +31,7 @@ def parse_args():
     parser.add_argument("--lambda_r", type=float, default=1.0, help="RAG loss weight")
     parser.add_argument("--unconstrained", action='store_true', default=False, help="whether to enable unconstrained optimization, true for border attack")
     
-    parser.add_argument("--root", type=str, default="expeirments", help="folder to save results")
+    parser.add_argument("--root", type=str, default="experiments", help="folder to save results")
     parser.add_argument("--div", type=str, default="high", help="scenario for textual chat diversity, low or high")
     parser.add_argument("--dtype", type=str, default="bf16", help="data type for models and data, bf16 or fp16 or fp32")
     parser.add_argument("--ensemble_size", type=int, default=512, help="ensemble sample size")
