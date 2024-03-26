@@ -43,7 +43,8 @@ We run all our experiments on A100 GPUs with 40GB memory. To get started, follow
    pip install torch==2.1.0 torchvision
    pip install git+https://github.com/huggingface/transformers.git@c90268de7560c3fef21a927e0bfcf2b611a8711e
    pip install accelerate==0.22.0
-   pip install git+https://github.com/necla-ml/Diff-JPEG  
+   pip install git+https://github.com/necla-ml/Diff-JPEG
+   pip install protobuf pandas kornia
    ```
 
 ## Datasets
